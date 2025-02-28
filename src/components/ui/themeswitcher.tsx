@@ -1,33 +1,74 @@
-'use client'
-import { useState, useEffect } from 'react';
+"use client";
 
-const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState<string>('light');
+import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-      setTheme(storedTheme);
-      document.documentElement.classList.add(storedTheme);
-    }
-  }, []);
+interface ThemeToggleProps {
+    className?: string;
+}
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.remove('light', 'dark');
-    document.documentElement.classList.add(newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
+export default function ThemeSwitcher({ className }: ThemeToggleProps) {
+    const [darkMode, setDarkMode] = useState<boolean>(true);
 
-  return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded bg-gray-300 dark:bg-gray-700 text-black dark:text-white"
-    >
-      {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-    </button>
-  );
-};
+    useEffect(() => {
+        const storedTheme = localStorage.getItem("theme");
+        if (storedTheme === "dark") {
+            setDarkMode(true);
+            document.documentElement.classList.add("dark");
+        } else {
+            setDarkMode(false);
+            document.documentElement.classList.add("light");
+        }
+    }, []);
 
-export default ThemeSwitcher;
+    const toggleTheme = () => {
+        const newDarkMode = !darkMode;
+        setDarkMode(newDarkMode);
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(newDarkMode ? "dark" : "light");
+        localStorage.setItem("theme", newDarkMode ? "dark" : "light");
+    };
+
+    return (
+        <div
+            className={cn(
+                "flex w-16 h-8 p-1 rounded-full cursor-pointer transition-all duration-300",
+                darkMode ? "bg-zinc-950 border border-zinc-800" : "bg-white border border-zinc-200",
+                className
+            )}
+            onClick={toggleTheme}
+            role="button"
+            tabIndex={0}
+        >
+            <div className="flex justify-between items-center w-full">
+                <div
+                    className={cn(
+                        "flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300",
+                        darkMode
+                            ? "transform translate-x-0 bg-zinc-800"
+                            : "transform translate-x-8 bg-gray-200"
+                    )}
+                >
+                    {darkMode ? (
+                        <Moon className="w-4 h-4 text-white" strokeWidth={1.5} />
+                    ) : (
+                        <Sun className="w-4 h-4 text-gray-700" strokeWidth={1.5} />
+                    )}
+                </div>
+                <div
+                    className={cn(
+                        "flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300",
+                        darkMode ? "bg-transparent" : "transform -translate-x-8"
+                    )}
+                >
+                    {darkMode ? (
+                        <Sun className="w-4 h-4 text-gray-500" strokeWidth={1.5} />
+                    ) : (
+                        <Moon className="w-4 h-4 text-black" strokeWidth={1.5} />
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
