@@ -36,6 +36,7 @@ const PROJECTS: Project[] = [
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
     id: 'project2',
   },
+ 
 ]
 
 function ProjectVideo({ src }: { src: string }) {
@@ -86,9 +87,9 @@ function ProjectVideo({ src }: { src: string }) {
   )
 }
 
-function MorphingDialogDemo() {
+function ProjectPlayer() {
   return (
-    <div className="flex min-h-[400px] w-full items-center justify-center bg-white p-8 dark:bg-zinc-950">
+    <div className="flex min-h-[400px] w-full items-center justify-center bg-white p-8 dark:bg-black">
       <div className="grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
         {PROJECTS.map((project) => (
           <div key={project.name} className="space-y-2">
@@ -116,4 +117,4 @@ function MorphingDialogDemo() {
   )
 }
 
-export { MorphingDialogDemo }
+export { ProjectPlayer }
