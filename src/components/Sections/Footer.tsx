@@ -4,8 +4,6 @@ import {
   Blocks,
   CodeXml,
   CreditCard,
-  Handshake,
-  Scale,
   Webhook,
 } from "lucide-react";
 import { Footer } from "@/components/blocks/footer";
