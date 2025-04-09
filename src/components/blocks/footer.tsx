@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, MailIcon } from "lucide-react";
 
 interface SocialLink {
     name: string;
@@ -79,11 +79,19 @@ export const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
                                 </div>
                             ))}
                             <div className="col-span-3">
-                                <p>
+                                <p className="font-rubik mt-2 text-sm">
                                     Feel free to reach out to me for any inquiries or collaboration
                                     opportunities.
                                 </p>
-                                <span>anshulkardamsr@gmail.com</span>
+                                <div className="flex items-center text-blue-400 gap-3 mt-3">
+                                    <MailIcon className="w-5 h-5" />
+                                    <a
+                                        href="mailto:anshulkardamsr@gmail.com"
+                                        className="hover:underline"
+                                    >
+                                        anshulkardamsr@gmail.com
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

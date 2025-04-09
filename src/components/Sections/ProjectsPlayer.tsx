@@ -20,20 +20,20 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'Tirth.co',
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
+      'From temples to puja, We make every step Effortless.',
+    link: 'https://www.tirth.co/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'https://res.cloudinary.com/du9f90ci8/video/upload/v1744226642/lg8hr3tiuob7ilieiji2.webm',
     id: 'project1',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
+    name: 'Skippit!',
+    description: 'Delegate Tasks and Enjoy a hassle free life!',
+    link: '',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+      'https://res.cloudinary.com/du9f90ci8/video/upload/v1744228459/Record_2025-04-10-01-21-56_qqgcjv.mp4',
     id: 'project2',
   },
  

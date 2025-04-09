@@ -6,26 +6,32 @@ import { TechStackGrid } from "@/components/Sections/icons";
 import { Header } from "@/components/Sections/Navbar";
 import { ProjectPlayer } from "@/components/Sections/ProjectsPlayer";
 import { ExperienceTimeline } from "@/components/Sections/Timeline";
-import { CopyButton } from "@/components/ui/copy-button";
+import { GradientText } from "@/components/ui/gradient-text";
 
 const page = () => {
     return (
-        <div>
+        <main>
             <Header />
-            <Background />
-            <div className="flex gap-4">
-                <div className="font-extralight text-base text-white py-4">
-                    anshulkardamsr@gmail.com
-                </div>
-                <CopyButton value="anshulkardamsr@gmail.com" />
-            </div>
-            <Aboutme />
+            <section id="home">
+                <Background />
+            </section>
+            <section id="about">
+                <Aboutme />
+            </section>
             <TechStackGrid />
+            <section id="projects" className="scroll-mt-20">
+                <h3 className="text-center text-lg font-rubik">FEATURED CASE STUDIES</h3>
+                <h1 className="text-center text-4xl font-noto font-medium tracking-tighter md:text-5xl lg:text-5xl">
+                    Curated <GradientText>work</GradientText>
+                </h1>
+            </section>
             <HighlightTube />
             <ProjectPlayer />
-            <ExperienceTimeline />
+            <section id="work" >
+                <ExperienceTimeline />
+            </section>
             <BackgroundBeamsCTA />
-        </div>
+        </main>
     );
 };
 

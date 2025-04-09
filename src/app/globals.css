@@ -35,6 +35,12 @@ body {
     --radius: 0.5rem;
     --sky-400: #38bdf8;
     --sky-500: #0ea5e9;
+    --color-1: 330 100% 40%;
+    --color-2: 140 100% 55%;
+    --color-3: 210 100% 30%;
+    --color-4: 60 100% 70%;
+    --color-5: 295 100% 45%;
+    --brand: 50 100% 50%;
   }
   .dark {
     --background: 0 0% 0%;
@@ -63,6 +69,12 @@ body {
     --chart-5: 340 75% 55%;
     --sky-400: #38bdf8;
     --sky-500: #0ea5e9;
+    --color-1: 330 100% 40%;
+    --color-2: 140 100% 55%;
+    --color-3: 210 100% 30%;
+    --color-4: 60 100% 70%;
+    --color-5: 295 100% 45%;
+    --brand: 50 100% 50%;
   }
 }
 
@@ -73,6 +85,10 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 
