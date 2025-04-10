@@ -27,11 +27,11 @@ export default function MobileWarningPage() {
                 </div>
                 <Button
                     variant="expandIcon"
-                    className="font-medium font-inter bg-neutral-900 w-40 h-11 text-white hover:bg-white hover:text-black"
+                    className="font-medium font-inter mt-4 bg-neutral-600 w-40 h-11 text-white hover:bg-white hover:text-black"
                     Icon={() => <ArrowRight className="h-4 w-4" />}
                     iconPlacement="right"
                 >
-                    Get Resume
+                    Download Resume
                 </Button>
             </motion.div>
         </main>
