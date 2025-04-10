@@ -10,6 +10,7 @@ import {
     Rubik,
 } from "next/font/google";
 import "./globals.css";
+import MobileRedirectWrapper from "@/components/blocks/mobileViewWrapper";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const rubik = Rubik({ subsets: ["latin"], variable: "--font-rubik", display: "swap" });
@@ -49,8 +50,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`scroll-smooth ${geistSans.variable} ${geistMono.variable} ${inter.variable} ${rubik.variable} ${notoSansKr.variable} ${orbitron.variable} ${oxanium.variable} ${babylonica.variable} antialiased`}>
-                {children}
+            <body
+                className={`scroll-smooth ${geistSans.variable} ${geistMono.variable} ${inter.variable} ${rubik.variable} ${notoSansKr.variable} ${orbitron.variable} ${oxanium.variable} ${babylonica.variable} antialiased`}
+            >
+                <MobileRedirectWrapper> {children}</MobileRedirectWrapper>
             </body>
         </html>
     );

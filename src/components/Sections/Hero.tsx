@@ -26,13 +26,13 @@ export default function Background() {
                         Transforming startup ideas into robust web experiences—code to deployment.
                     </div>
                     <div className="font-rubik text-base md:text-4xl dark:text-neutral-200 py-4 ">
-                        <span> Hello, I'm Anshul Kardam - A </span>
+                        <span> Hello, I'm Anshul Kardam -</span>
                         <AnimatedWordCycle
-                            words={["Full Stack ", "Nextjs ", "Mobile App ", "Backend "]}
+                            words={["Full Stack", "Mobile App", "Backend"]}
                             interval={3000}
-                            className={"text-foreground font-semi-bold"}
+                            className={"text-foreground font-semi-bold px-3"}
                         />
-                        <span> Developer</span>
+                        <span>Developer</span>
                     </div>
                 </motion.div>
                 <div className="flex justify-center w-full mt-6">
@@ -53,7 +53,9 @@ export default function Background() {
                             Icon={() => <ArrowRight className="h-4 w-4" />}
                             iconPlacement="right"
                         >
-                            Get Resume
+                            <a href="/AnshulKardam.pdf" download>
+                                Get Resume
+                            </a>
                         </Button>
                         <CopyEmail email="anshulkardamsr@gmail.com" />
                     </motion.div>

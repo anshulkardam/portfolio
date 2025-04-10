@@ -3,6 +3,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { GradientText } from "./gradient-text";
 
 interface Brand {
     name: string;
@@ -32,11 +33,11 @@ export const BrandsGrid = React.forwardRef<HTMLDivElement, BrandsGridProps>(
                     {title && (
                         <div className="text-center mb-12 animate-fade-in">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                                My Tech Stack
+                                My Tech <GradientText> Stack </GradientText>
                             </h2>
                             <div className="w-16 h-1 bg-primary mx-auto mb-6 mt-2"></div>
                             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                                Here are the technologies I work with to bring ideas to life.
+                                Here are the technologies I work with.
                             </p>
                         </div>
                     )}
