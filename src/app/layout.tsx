@@ -9,8 +9,7 @@ import {
     Oxanium,
     Rubik,
 } from "next/font/google";
-import "./globals.css";
-import MobileRedirectWrapper from "@/components/blocks/mobileViewWrapper";
+import "./globals.css"; 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const rubik = Rubik({ subsets: ["latin"], variable: "--font-rubik", display: "swap" });
@@ -40,7 +39,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     title: "Anshul Kardam - Full Stack Developer",
-    description: "Anshul Kardam",
+    description: "Full Stack Developer Portfolio",
 };
 
 export default function RootLayout({
@@ -53,7 +52,7 @@ export default function RootLayout({
             <body
                 className={`scroll-smooth ${geistSans.variable} ${geistMono.variable} ${inter.variable} ${rubik.variable} ${notoSansKr.variable} ${orbitron.variable} ${oxanium.variable} ${babylonica.variable} antialiased`}
             >
-                <MobileRedirectWrapper> {children}</MobileRedirectWrapper>
+               {children}
             </body>
         </html>
     );
